@@ -1,1 +1,6 @@
-.devcontainer, .ipynb_checkpoints
+# Hidden development containers
+.devcontainer/
+
+# Jupyter Notebook checkpoints (all locations)
+.ipynb_checkpoints/
+code/.ipynb_checkpoints/
