@@ -4,3 +4,5 @@
 # Jupyter Notebook checkpoints (all locations)
 .ipynb_checkpoints/
 code/.ipynb_checkpoints/
+
+.DS_Store/
