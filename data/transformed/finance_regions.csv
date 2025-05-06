@@ -1,0 +1,81 @@
+,AREA,year,Acres Irrigated,id
+51,Region 01 New England,2023,9983,52
+52,Region 02 Mid Atlantic,2023,46871,53
+53,Region 03 South Atlantic Gulf,2023,236657,54
+54,Region 04 Great Lakes,2023,88445,55
+55,Region 05 Ohio,2023,21392,56
+56,Region 06 Tennessee,2023,4584,57
+57,Region 07 Upper Mississippi,2023,209582,58
+58,Region 08 Lower Mississippi,2023,1245899,59
+59,Region 09 Souris Red Rainy,2023,18968,60
+60,Region 10 Missouri,2023,1857732,61
+61,Region 11 Arkansas White Red,2023,805899,62
+62,Region 12 Texas Gulf,2023,475697,63
+63,Region 13 Rio Grande,2023,198111,64
+64,Region 14 Upper Colorado,2023,290194,65
+65,Region 15 Lower Colorado,2023,196637,66
+66,Region 16 Great Basin,2023,481840,67
+67,Region 17 Pacific Northwest,2023,1046900,68
+68,Region 18 California,2023,1396113,69
+69,Region 19 Alaska,2023,162,70
+70,Region 20 Hawaii,2023,5160,71
+122,Region 01 New England,2018,13074,123
+123,Region 02 Mid Atlantic,2018,89357,124
+124,Region 03 South Atlantic Gulf,2018,220174,125
+125,Region 04 Great Lakes,2018,144945,126
+126,Region 05 Ohio,2018,66605,127
+127,Region 06 Tennessee,2018,9206,128
+128,Region 07 Upper Mississippi,2018,200079,129
+129,Region 08 Lower Mississippi,2018,1195170,130
+130,Region 09 Souris Red Rainy,2018,48703,131
+131,Region 10 Missouri,2018,2175814,132
+132,Region 11 Arkansas White Red,2018,783488,133
+133,Region 12 Texas Gulf,2018,417674,134
+134,Region 13 Rio Grande,2018,89877,135
+135,Region 14 Upper Colorado,2018,218688,136
+136,Region 15 Lower Colorado,2018,210888,137
+137,Region 16 Great Basin,2018,330242,138
+138,Region 17 Pacific Northwest,2018,1393325,139
+139,Region 18 California,2018,1222139,140
+140,Region 19 Alaska,2018,574,141
+141,Region 20 Hawaii,2018,4773,142
+193,Region 01 New England,2013,8447,194
+194,Region 02 Mid Atlantic,2013,47453,195
+195,Region 03 South Atlantic Gulf,2013,336230,196
+196,Region 04 Great Lakes,2013,75825,197
+197,Region 05 Ohio,2013,20868,198
+198,Region 06 Tennessee,2013,3855,199
+199,Region 07 Upper Mississippi,2013,148480,200
+200,Region 08 Lower Mississippi,2013,1132902,201
+201,Region 09 Souris Red Rainy,2013,16194,202
+202,Region 10 Missouri,2013,1660210,203
+203,Region 11 Arkansas White Red,2013,655204,204
+204,Region 12 Texas Gulf,2013,505967,205
+205,Region 13 Rio Grande,2013,133255,206
+206,Region 14 Upper Colorado,2013,246294,207
+207,Region 15 Lower Colorado,2013,127832,208
+208,Region 16 Great Basin,2013,371904,209
+209,Region 17 Pacific Northwest,2013,1094829,210
+210,Region 18 California,2013,1027293,211
+211,Region 19 Alaska,2013,137,212
+212,Region 20 Hawaii,2013,11870,213
+264,Region 01 New England,2003,2411,265
+265,Region 02 Mid Atlantic,2003,27504,266
+266,Region 03 South Atlantic Gulf,2003,236209,267
+267,Region 04 Great Lakes,2003,55027,268
+268,Region 05 Ohio,2003,22869,269
+269,Region 06 Tennessee,2003,5587,270
+270,Region 07 Upper Mississippi,2003,87692,271
+271,Region 08 Lower Mississippi,2003,1001060,272
+272,Region 09 Souris Red Rainy,2003,17303,273
+273,Region 10 Missouri,2003,1307704,274
+274,Region 11 Arkansas White Red,2003,561407,275
+275,Region 12 Texas Gulf,2003,384796,276
+276,Region 13 Rio Grande,2003,200677,277
+277,Region 14 Upper Colorado,2003,318493,278
+278,Region 15 Lower Colorado,2003,108875,279
+279,Region 16 Great Basin,2003,279780,280
+280,Region 17 Pacific Northwest,2003,1018000,281
+281,Region 18 California,2003,782571,282
+282,Region 19 Alaska,2003,995,283
+283,Region 20 Hawaii,2003,9085,284
