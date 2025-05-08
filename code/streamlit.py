@@ -17,59 +17,60 @@ add_selectbox = st.sidebar.selectbox(
 
 # Overview section
 if add_selectbox == "Overview":
+    
     st.header("Overview Dashboard")
 
-st.title('Feature Importance Visualization')
+    # Load saved data
+    @st.cache_data  # Cache for performance
+    def load_data():
+        return pd.read_csv(transformed_path + 'random_forest.csv')
 
-# Load saved data
-@st.cache_data  # Cache for performance
-def load_data():
-    return pd.read_csv(transformed_path + 'random_forest.csv')
+    df = load_data()
 
-df = load_data()
+    st.title('Feature Importance Visualization')
 
-# Create the plot
-fig, ax = plt.subplots(figsize=(12, 24))  # Height adjusted as in your original
+    # Create the plot
+    fig, ax = plt.subplots(figsize=(12, 24))  # Height adjusted as in your original
 
-# Get sorted data
-sorted_idx = np.argsort(df['importance'])
-features = df['feature'].values
-importances = df['importance'].values
+    # Get sorted data
+    sorted_idx = np.argsort(df['importance'])
+    features = df['feature'].values
+    importances = df['importance'].values
 
-# Create horizontal bars
-bars = ax.barh(
-    range(len(sorted_idx)),
-    importances[sorted_idx],
-    color='royalblue',
-    height=0.8
-)
-
-# Customize labels
-ax.set_yticks(range(len(sorted_idx)))
-ax.set_yticklabels([features[i] for i in sorted_idx], fontsize=10)
-ax.set_title('Feature Importances', pad=20, fontsize=14)
-ax.set_xlabel('Relative Importance', fontsize=12)
-ax.grid(axis='x', alpha=0.3)
-
-# Add value labels
-for bar in bars:
-    width = bar.get_width()
-    ax.text(
-        width + 0.001,
-        bar.get_y() + bar.get_height()/2,
-        f'{width:.3f}',
-        va='center',
-        fontsize=8
+    # Create horizontal bars
+    bars = ax.barh(
+        range(len(sorted_idx)),
+        importances[sorted_idx],
+        color='royalblue',
+        height=0.8
     )
 
-plt.tight_layout()
+    # Customize labels
+    ax.set_yticks(range(len(sorted_idx)))
+    ax.set_yticklabels([features[i] for i in sorted_idx], fontsize=10)
+    ax.set_title('Feature Importances', pad=20, fontsize=14)
+    ax.set_xlabel('Relative Importance', fontsize=12)
+    ax.grid(axis='x', alpha=0.3)
 
-# Display in Streamlit
-st.pyplot(fig)
+    # Add value labels
+    for bar in bars:
+        width = bar.get_width()
+        ax.text(
+            width + 0.001,
+            bar.get_y() + bar.get_height()/2,
+            f'{width:.3f}',
+            va='center',
+            fontsize=8
+        )
 
-# Optional: Show raw data
-if st.checkbox('Show raw data'):
-    st.dataframe(df.sort_values('importance', ascending=False))    
+    plt.tight_layout()
+
+    # Display in Streamlit
+    st.pyplot(fig)
+
+    # Optional: Show raw data
+    if st.checkbox('Show raw data'):
+        st.dataframe(df.sort_values('importance', ascending=False))    
 
 # Cannot finance improvements section
 elif add_selectbox == "Cannot Finance Improvements":
