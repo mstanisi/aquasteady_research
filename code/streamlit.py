@@ -48,6 +48,10 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+**Currently in the development stage**, lab tests for the efficacy of AquaSteady's seaweed-based hydrogels are highly promising. This graph shows how a sapling planted in AquaSteady withstood a drought period and grew to be 27% larger than a reference, non-AquaSteady sapling.
+""")
+
 # ====================
 # VISUALIZATIONS
 # ====================
@@ -71,6 +75,11 @@ with st.expander("About this graph"):
     st.markdown("""
     "AquaSteady nets and discs have proven effective on saplings according to a study done on orange trees in Brazil. Soon after the transplantation they were hit by 45 days of drought but the saplings with AquaSteady were doing well and now one year after the planting they grew 27% more than the reference saplings."
     """)
+
+st.markdown("""
+    **AquaSteady will soon be market-ready**, but the question remains whether farmers will be on the market for it. Using 20 years of data from the USDA Census of Agriculture, I investigated what factors are preventing American farmers from reaching their water conservation goals. 
+Because all these factors rose over time, the data was multi-correlated and required **machine learning techniques** to uncover the true meaning behind them. 
+""")
 
 # Other images
 display_image_with_white_bg(visuals_path + "ridge_regression.png", "")
@@ -100,6 +109,9 @@ with st.expander("About this map"):
     Colors show relative importance scores from Random Forest analysis.
     """)
 
+st.markdown("""
+    Now that the major impediments to water conservation have been determined, as well what regions are most affected by these trends, let's take a look at how these factors plot over time. 
+""")
 
 # ====================
 # INTERACTIVE CHARTS
@@ -124,7 +136,7 @@ plotly_template = {
     }
 }
 
-st.header("How many farmers, by year, reported that they 'cannot finance improvements' to their irrigation setups.")
+st.header("Farmers reporting that they 'cannot finance improvements' to their irrigation setups grew steadily.")
 top_regions = finance_regions.groupby('AREA')['Acres Irrigated'].max().nlargest(5).index
 fig_line = px.line(
     finance_regions[finance_regions['AREA'].isin(top_regions)],
@@ -143,7 +155,7 @@ def load_yield_data():
     
 yield_states, yield_regions = load_yield_data()
 
-st.header("How many farmers, by year, reported that 'risk of reduced yield or poorer crop quality' prevented them from making irrigation improvements.")
+st.header("Farmers reporting that 'risk of reduced yield or poorer crop quality' prevented them from making irrigation improvements also rose over time.")
 top_regions = yield_regions.groupby('AREA')['Acres Irrigated'].max().nlargest(5).index
 fig_line = px.line(
     yield_regions[yield_regions['AREA'].isin(top_regions)],
@@ -153,3 +165,9 @@ fig_line = px.line(
     template=plotly_template
 )
 st.plotly_chart(fig_line)
+
+st.markdown("""
+    We can now, with confidence, say that the markets most worth targeting are in farmland belonging to three major watersheds: **California (region 18), Missouri (region 10), and Arkansas-White-Red (region 11)**. Within these regions, the marketing itself should focus on **AquaSteady as a financially stable solution for irrigation and as a boon for crop yield and crop quality**. 
+
+I will be returning to this project to determine what agricultural zones within the aforementioned regions should be targeted for field research, as well as how farmers in these zones deal with droughts. 
+""")
