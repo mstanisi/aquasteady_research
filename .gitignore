@@ -1,10 +1,7 @@
 .devcontainer/
-
 .ipynb_checkpoints/
 code/.DS_Store/
 code/.ipynb_checkpoints/
 code/4. API call.ipynb
 credentials/
 .DS_Store
-
-.DS_Store/
