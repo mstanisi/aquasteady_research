@@ -3,6 +3,7 @@
 
 # Jupyter Notebook checkpoints (all locations)
 .ipynb_checkpoints/
+code/.DS_Store/
 code/.ipynb_checkpoints/
 code/4. API call.ipynb
 credentials/
